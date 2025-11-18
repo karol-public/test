@@ -230,6 +230,7 @@ class Input {
     constructor(game) {
         this.game = game;
         this.setupListeners();
+        this.setupTouchControls();
     }
 
     setupListeners() {
@@ -262,6 +263,28 @@ class Input {
                 startBtn.blur(); // Remove focus so spacebar doesn't trigger click
             });
         }
+    }
+
+    setupTouchControls() {
+        const bindButton = (id, action) => {
+            const btn = document.getElementById(id);
+            if (!btn) return;
+
+            const handler = (e) => {
+                if (e.cancelable) e.preventDefault(); // Prevent scrolling/zooming
+                if (this.game.isGameOver && id !== 'start-btn') return;
+                action();
+            };
+
+            btn.addEventListener('touchstart', handler, { passive: false });
+            btn.addEventListener('mousedown', handler);
+        };
+
+        bindButton('btn-left', () => this.game.move(-1));
+        bindButton('btn-right', () => this.game.move(1));
+        bindButton('btn-rotate', () => this.game.rotate());
+        bindButton('btn-down', () => this.game.drop());
+        bindButton('btn-drop', () => this.game.hardDrop());
     }
 }
 

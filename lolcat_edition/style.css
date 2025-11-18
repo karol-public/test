@@ -223,6 +223,34 @@ canvas {
     transform: rotate(-3deg);
 }
 
+/* Mobile Controls */
+.mobile-controls {
+    display: none;
+}
+
+.control-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    background: white;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    box-shadow: 0 4px 0px rgba(219, 39, 119, 0.2);
+}
+
+.control-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
 @media (max-width: 600px) {
     .game-container {
         flex-direction: column;
@@ -243,5 +271,41 @@ canvas {
 
     .controls-info {
         display: none;
+    }
+
+    .mobile-controls {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto auto;
+        gap: 12px;
+        margin: 1.5rem auto 0;
+        justify-content: center;
+    }
+
+    #btn-rotate {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #btn-left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #btn-down {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #btn-right {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    #btn-drop {
+        grid-column: 2;
+        grid-row: 3;
+        border-color: #ef4444;
+        color: #ef4444;
     }
 }
