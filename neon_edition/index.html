@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="game-container">
+            <div class="game-info">
+                <h1>NEON<br>TETRIS</h1>
+                <div class="score-board">
+                    <div class="score-label">SCORE</div>
+                    <div id="score">0</div>
+                </div>
+                <div class="score-board">
+                    <div class="score-label">LEVEL</div>
+                    <div id="level">1</div>
+                </div>
+                <div class="controls-info">
+                    <p><span>←</span> <span>→</span> Move</p>
+                    <p><span>↑</span> Rotate</p>
+                    <p><span>↓</span> Drop</p>
+                </div>
+                <button id="start-btn">START GAME</button>
+            </div>
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+            <div id="game-over-overlay" class="overlay hidden">
+                <h2>GAME OVER</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">PLAY AGAIN</button>
+            </div>
+            <div id="pause-overlay" class="overlay hidden">
+                <h2>PAUSED</h2>
+                <button id="resume-btn">RESUME</button>
+            </div>
+        </div>
+    </div>
+    <button id="pause-btn" class="icon-btn" title="Pause Game">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+    </button>
+    <script src="game.js"></script>
+</body>
+
+</html>
