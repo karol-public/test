@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2F4F4F"/>
+  <circle cx="200" cy="150" r="100" fill="#696969"/>
+  <path d="M160 140 L0 200" stroke="red" stroke-width="5" opacity="0.8"/>
+  <path d="M240 140 L400 200" stroke="red" stroke-width="5" opacity="0.8"/>
+  <circle cx="160" cy="140" r="15" fill="red"/>
+  <circle cx="240" cy="140" r="15" fill="red"/>
+  <text x="200" y="50" font-family="Impact, sans-serif" font-size="40" fill="white" stroke="black" stroke-width="2" text-anchor="middle">LASER</text>
+  <text x="200" y="280" font-family="Impact, sans-serif" font-size="40" fill="white" stroke="black" stroke-width="2" text-anchor="middle">FOCUS</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#8B4513"/>
+  <path d="M100 300 L200 100 L300 300 Z" fill="#D2691E"/>
+  <circle cx="170" cy="180" r="10" fill="white"/>
+  <circle cx="170" cy="180" r="3" fill="black"/>
+  <circle cx="230" cy="180" r="10" fill="white"/>
+  <circle cx="230" cy="180" r="3" fill="black"/>
+  <path d="M180 220 Q200 210 220 220" stroke="black" fill="none" stroke-width="3"/>
+  <text x="200" y="50" font-family="Impact, sans-serif" font-size="50" fill="white" stroke="black" stroke-width="2" text-anchor="middle">NO</text>
+  <text x="200" y="280" font-family="Impact, sans-serif" font-size="40" fill="white" stroke="black" stroke-width="2" text-anchor="middle">GAME OVER</text>
+</svg>
