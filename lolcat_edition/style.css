@@ -251,7 +251,8 @@ canvas {
     box-shadow: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px),
+(hover: none) and (pointer: coarse) {
     .game-container {
         flex-direction: column;
         padding: 1rem;
